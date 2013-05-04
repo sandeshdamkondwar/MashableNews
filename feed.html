@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MartJack Feed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/custom-responsive.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<script src="js/json.js"></script>
+	<script src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	
+	<!-- Template -->
+	<script type="text/template" id="feedTemplate">
+		<div class="entry">
+			<a href="<%= link %>" class="title"><%= title %></a>
+			<% 
+				var d = new Date(publishedDate);
+			%>
+			<div class="content"><%= content %>
+				<p class="note"> <strong>Written By: </strong> <%= author %>, <strong>On: </strong><%= d.toDateString() %></p>
+			</div>
+			
+		</div>
+	</div>
+	</script>
+
+
+	<div class="container-fluid">
+		<div class="navbar navbar-fixed-top">
+		  <div class="navbar-inner">
+		    <div class="container">
+		 
+		      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+		      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </a>
+		 
+		      <!-- Be sure to leave the brand out there if you want it shown -->
+		      <a class="brand" href="#">Project name</a>
+		 
+		      <!-- Everything you want hidden at 940px or less, place within here -->
+		      <div class="nav-collapse collapse">
+		        <ul class="nav">
+		        	<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+		        </ul>
+		      </div>
+		 
+		    </div>
+		  </div>
+		</div>
+
+	<!-- 	<div class="row-fluid visible-phone">
+			<ul class="nav">
+				<li class="dropdown">
+				  <button data-toggle="dropdown" class="btn dropdown-toggle">
+				  	Dropdown 
+				  	<b class="caret"></b>
+				  </button>
+				  <ul class="dropdown-menu" id="menu1">
+				    <li class="dropdown-submenu">
+				        <a tabindex="-1">Mashable</a>
+				        <ul class="dropdown-menu">
+				            <li class="nav-header">Nav header</li>
+				            <li>
+				            	<a tabindex="-1" class="newsSource" source="http://feeds.mashable.com/mashable/tech">
+				            		Mashable - Tech
+				            	</a>
+				            </li>
+				            <li>
+				            	<a tabindex="-1" class="newsSource" source="http://feeds.mashable.com/mashable/business">
+				            		Mashable - Business
+				            	</a>
+				            </li>
+				            <li>
+				            	<a tabindex="-1" class="newsSource" source="http://feeds.mashable.com/mashable/business">
+				            		Mashable - Entertainment
+				            	</a>
+				            </li>
+				            <li>
+				            	<a tabindex="-1" class="newsSource" source="http://feeds.mashable.com/mashable/socialmedia">
+				            		Mashable - Social Media
+				            	</a>
+				            </li>
+				            <li class="divider"></li>
+				            <li class="nav-header">Nav header</li>
+				            <li>
+				            	<a tabindex="-1" class="newsSource" source="http://feeds.mashable.com/mashable/video">
+				            		Videos
+				            	</a>
+				            </li>
+				            <li>
+				            	<a tabindex="-1" source="">
+				            		One more separated link
+				            	</a>
+				            </li>
+				        </ul>
+				    </li>
+				    <li><a tabindex="-1">Another action</a></li>
+				    <li><a tabindex="-1">Something else here</a></li>
+				    <li class="divider"></li>
+				    <li><a tabindex="-1">Separated link</a></li>
+				  </ul>
+				  <span class="pull-right newsHeading">Mashable - Tech</span>
+				</li>
+			</ul>
+		</div> -->
+
+		<div class="row-fluid">
+			<div class="span2 hidden-phone dark" style="position:fixed;">Sidebar
+
+				<p>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ab, amet, error rerum voluptates totam reprehenderit quos quidem eaque earum eligendi officia consequuntur odio vitae dolore deserunt corporis sapiente iste!</span>
+					<span>Impedit, cum, vitae, expedita similique soluta quas aut eaque numquam dolore esse nostrum labore recusandae maiores atque libero nemo cupiditate cumque minus ipsa quae sit quaerat animi veniam alias incidunt!</span>
+					<span>Natus nostrum eum alias nulla dolores adipisci quia nisi illum repudiandae omnis. Tempore, iste, ad, quos eaque tempora praesentium quia asperiores qui totam atque maiores molestiae autem voluptatem doloremque quas.</span>
+					<span>Atque, numquam, enim, est nostrum facilis eaque cumque distinctio inventore deserunt officia amet aliquid quos voluptatibus asperiores recusandae rem tempora. Veniam, in enim voluptates assumenda nostrum nobis excepturi minus neque.</span>
+					<span>Temporibus, corporis, voluptates, aspernatur repellat asperiores consectetur consequuntur cupiditate labore obcaecati molestiae voluptatem iste sit debitis et nobis aliquid quos sint tenetur? Sint, est fugit aut rerum sit error quasi!</span>
+					<span>At, non, debitis fugit tempora ut qui doloribus repellendus totam odio impedit repudiandae explicabo odit ratione voluptatum autem aliquid temporibus omnis perferendis facere earum. Atque, qui magnam minus sapiente sed.</span>
+					<span>Odio, suscipit pariatur quo quos odit mollitia ad quia. Ab, adipisci, delectus, voluptas, voluptates nostrum nam ducimus explicabo minima consequuntur odit aliquam quos tempore at quae rem! Est, accusamus, assumenda.</span>
+					<span>Aut, reiciendis, neque, velit, rerum earum repellat quod maiores itaque omnis commodi soluta repudiandae esse deserunt perspiciatis id voluptatum expedita atque doloribus facilis at. Maxime, nulla quis ratione vero nisi.</span>
+					<span>Nobis, error, voluptates consequatur iusto placeat molestias est atque architecto rerum reprehenderit? Illo, saepe, alias, illum, unde impedit harum nam beatae blanditiis iusto corporis ipsam necessitatibus quos iure velit dignissimos.</span>
+					<span>Deleniti, eaque, temporibus, dolore, odit eveniet magni cupiditate id consequatur ut illum accusamus cumque ipsa facilis assumenda minus nemo placeat qui earum labore minima harum! Eligendi, quod nesciunt alias obcaecati?</span>
+					<span>Dignissimos, velit, maiores, impedit minima placeat pariatur quibusdam deserunt quasi aliquid aliquam qui officiis quis? Ipsam, ex, possimus eveniet minus numquam aperiam omnis sapiente rem voluptates ad nobis officia quaerat.</span>
+					<span>Quis, ratione, dolorum, nemo, accusamus molestiae excepturi fugiat recusandae rerum non vitae neque ipsum quae. Placeat, sequi, pariatur minus explicabo ab voluptatum praesentium fugit fugiat omnis ea maxime debitis ad.</span>
+					<span>Deserunt ad quis nemo sit ratione dolorem asperiores? Soluta, dolorem velit hic quibusdam in deserunt eius iusto ipsum laborum quidem. Sapiente, veniam aut reiciendis explicabo provident aliquid nisi pariatur magni?</span>
+					<span>Nihil, quidem, eveniet reiciendis possimus officia odio odit vero ullam corrupti quod laboriosam cupiditate doloremque quae at repellendus enim pariatur quo itaque asperiores iste atque quia porro unde necessitatibus dolorem.</span>
+					<span>Sit, animi, quos, hic architecto accusantium vel cupiditate fugiat reprehenderit tempora odio sapiente ipsa! Est, tenetur, id, sunt beatae quia provident cum explicabo expedita deleniti nihil pariatur quae nisi possimus.</span>
+					<span>Exercitationem, perferendis sequi eveniet ab odit minus ipsa aliquid doloremque vero ex in autem quasi atque ea nostrum hic minima! Dolore, incidunt, esse recusandae corrupti quibusdam rerum laboriosam perspiciatis. Voluptatum.</span>
+					<span>Iure, harum, quibusdam error natus deserunt blanditiis neque molestiae magnam incidunt aliquam. Totam, nihil, hic fugit pariatur aspernatur qui doloremque amet deserunt expedita recusandae ut sed temporibus eos suscipit odio!</span>
+					<span>Possimus nobis magnam magni facere! Consequatur, perspiciatis, eveniet, soluta magni delectus tempora numquam qui molestiae asperiores minima cupiditate fuga laborum repellendus debitis pariatur quo esse distinctio modi veniam placeat voluptatum!</span>
+					<span>Ab, fugit, suscipit, laudantium, architecto quaerat sapiente ipsum maiores ad voluptatum voluptates possimus iste aperiam optio itaque nemo nihil nisi quasi. Iusto dolor nisi perferendis odio modi cum blanditiis neque.</span>
+					<span>Aliquam, eaque, quas, assumenda dolorem tenetur sint enim nostrum officia voluptates rem unde alias aspernatur ad culpa quisquam beatae nihil nulla laudantium molestias illum delectus provident ea quaerat repudiandae autem.</span>
+
+				</p>
+			</div>
+			<div class="span10 pull-right">
+				<h1 class="newsHeading dark">Mashable - Tech</h1>
+				<div id="feed">
+					
+				</div>		
+			</div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		// Load the feeds library, version 1
+		google.load("feeds", "1");
+
+		var feedURL = "http://feeds.mashable.com/mashable/tech";
+		 
+		// Callback function
+		function loadFeeds() {
+		    // The feed we want to load
+		    var feed = new google.feeds.Feed(feedURL);
+		    feed.setNumEntries(10);
+		    // Load the feed
+		    feed.load(function(result) {
+		        if (!result.error) {
+		            var container = $('#feed');
+					var templateString = $('#feedTemplate').html();
+
+		            for (var i = 0; i < result.feed.entries.length; i++) {
+		                var entry = result.feed.entries[i];
+						var template = _.template(templateString,result.feed.entries[i]);
+
+						container.append(template);
+
+						
+		            }
+
+		            $('iframe').load(function(){
+		            	$(this).addClass('img-polaroid').parent().css('margin','0 auto');
+		            })
+
+		            $('img').load(function() {
+				    	if($(this).attr('src').toString().match("yIl2AUoC8zA")) {
+				    		$(this).addClass('smallImage').attr({
+				    			src: "img/email.png",
+				    			title: "Email this to your friends"
+				    		}).parent().parent().css('float','right');
+
+				    	}
+				    	else if($(this).attr('src').toString().match("D7DqB2pKExk")) {
+				    		$(this).addClass('smallImage').attr({
+				    			src: "img/comment.png",
+				    			title: "Comment on this post"
+				    		});	
+				    	}
+				    	else if($(this).attr('src').toString().match("7Q72WNTAKBA")
+				    		|| $(this).attr('src').toString().match("V_sGLiPBpWU")
+				    		|| $(this).attr('src').toString().match("gIN9vFwOqvQ")){
+				    		$(this).parent().remove();		
+				    	}
+				    	else if($(this).attr('src').toString().match("qj6IDK7rITs")){
+				    		$(this).addClass('smallImage').attr({
+				    			src: "img/facebook.png",
+				    			title: "Share this post on facebook"
+				    		});
+				    	}
+
+			    		if($(this).width() > 150)
+					  		$(this).addClass('img-polaroid').addClass('img-block');
+					});
+
+		            var d = $(container).find('img[src*="javascript"], img[alt*="Feed"]');
+		            d.remove();		            
+		        }
+		    })
+		}
+		 
+		// Set the callback function
+		google.setOnLoadCallback(loadFeeds);	
+
+
+		$('.newsSource').click(function(){
+			if( feedURL === $(this).attr('source')) return
+			feedURL = $(this).attr('source');
+			$('.newsHeading').html($(this).html());
+			$('.entry').remove();
+
+			loadFeeds();
+		});
+	</script>
+
+	
+</body>
+</html>
