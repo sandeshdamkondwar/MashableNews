@@ -20,6 +20,11 @@
 	#newsContainer {
 		width: 100%;
 	}
+
+	.navbar-inner > .container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
  
 /* Landscape phone to portrait tablet */
@@ -39,6 +44,16 @@
 
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
 	    padding: 0 5px;
+	}
+
+	.navbar-inner > .container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	body >.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
  
