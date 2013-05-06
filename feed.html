@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 	<title>Mashable News</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +21,7 @@
 			<div class="content"><%= content %>
 				<p class="note"> <strong>Written By: </strong> <%= author %>, <strong>On: </strong><%= d.toDateString() %></p>
 			</div>
-			
 		</div>
-	
 	</script>
 </head>
 <body>
@@ -84,31 +82,17 @@
 	
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span3 hidden-phone dark">Sidebar
-				<p>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ab, amet, error rerum voluptates totam reprehenderit quos quidem eaque earum eligendi officia consequuntur odio vitae dolore deserunt corporis sapiente iste!</span>
-					<span>Impedit, cum, vitae, expedita similique soluta quas aut eaque numquam dolore esse nostrum labore recusandae maiores atque libero nemo cupiditate cumque minus ipsa quae sit quaerat animi veniam alias incidunt!</span>
-					<span>Natus nostrum eum alias nulla dolores adipisci quia nisi illum repudiandae omnis. Tempore, iste, ad, quos eaque tempora praesentium quia asperiores qui totam atque maiores molestiae autem voluptatem doloremque quas.</span>
-					<span>Atque, numquam, enim, est nostrum facilis eaque cumque distinctio inventore deserunt officia amet aliquid quos voluptatibus asperiores recusandae rem tempora. Veniam, in enim voluptates assumenda nostrum nobis excepturi minus neque.</span>
-					<span>Temporibus, corporis, voluptates, aspernatur repellat asperiores consectetur consequuntur cupiditate labore obcaecati molestiae voluptatem iste sit debitis et nobis aliquid quos sint tenetur? Sint, est fugit aut rerum sit error quasi!</span>
-					<span>At, non, debitis fugit tempora ut qui doloribus repellendus totam odio impedit repudiandae explicabo odit ratione voluptatum autem aliquid temporibus omnis perferendis facere earum. Atque, qui magnam minus sapiente sed.</span>
-					<span>Odio, suscipit pariatur quo quos odit mollitia ad quia. Ab, adipisci, delectus, voluptas, voluptates nostrum nam ducimus explicabo minima consequuntur odit aliquam quos tempore at quae rem! Est, accusamus, assumenda.</span>
-					<span>Aut, reiciendis, neque, velit, rerum earum repellat quod maiores itaque omnis commodi soluta repudiandae esse deserunt perspiciatis id voluptatum expedita atque doloribus facilis at. Maxime, nulla quis ratione vero nisi.</span>
-					<span>Nobis, error, voluptates consequatur iusto placeat molestias est atque architecto rerum reprehenderit? Illo, saepe, alias, illum, unde impedit harum nam beatae blanditiis iusto corporis ipsam necessitatibus quos iure velit dignissimos.</span>
-					<span>Deleniti, eaque, temporibus, dolore, odit eveniet magni cupiditate id consequatur ut illum accusamus cumque ipsa facilis assumenda minus nemo placeat qui earum labore minima harum! Eligendi, quod nesciunt alias obcaecati?</span>
-					<span>Dignissimos, velit, maiores, impedit minima placeat pariatur quibusdam deserunt quasi aliquid aliquam qui officiis quis? Ipsam, ex, possimus eveniet minus numquam aperiam omnis sapiente rem voluptates ad nobis officia quaerat.</span>
-					<span>Quis, ratione, dolorum, nemo, accusamus molestiae excepturi fugiat recusandae rerum non vitae neque ipsum quae. Placeat, sequi, pariatur minus explicabo ab voluptatum praesentium fugit fugiat omnis ea maxime debitis ad.</span>
-					<span>Deserunt ad quis nemo sit ratione dolorem asperiores? Soluta, dolorem velit hic quibusdam in deserunt eius iusto ipsum laborum quidem. Sapiente, veniam aut reiciendis explicabo provident aliquid nisi pariatur magni?</span>
-					<span>Nihil, quidem, eveniet reiciendis possimus officia odio odit vero ullam corrupti quod laboriosam cupiditate doloremque quae at repellendus enim pariatur quo itaque asperiores iste atque quia porro unde necessitatibus dolorem.</span>
-					<span>Sit, animi, quos, hic architecto accusantium vel cupiditate fugiat reprehenderit tempora odio sapiente ipsa! Est, tenetur, id, sunt beatae quia provident cum explicabo expedita deleniti nihil pariatur quae nisi possimus.</span>
-					<span>Exercitationem, perferendis sequi eveniet ab odit minus ipsa aliquid doloremque vero ex in autem quasi atque ea nostrum hic minima! Dolore, incidunt, esse recusandae corrupti quibusdam rerum laboriosam perspiciatis. Voluptatum.</span>
-					<span>Iure, harum, quibusdam error natus deserunt blanditiis neque molestiae magnam incidunt aliquam. Totam, nihil, hic fugit pariatur aspernatur qui doloremque amet deserunt expedita recusandae ut sed temporibus eos suscipit odio!</span>
-					<span>Possimus nobis magnam magni facere! Consequatur, perspiciatis, eveniet, soluta magni delectus tempora numquam qui molestiae asperiores minima cupiditate fuga laborum repellendus debitis pariatur quo esse distinctio modi veniam placeat voluptatum!</span>
-					<span>Ab, fugit, suscipit, laudantium, architecto quaerat sapiente ipsum maiores ad voluptatum voluptates possimus iste aperiam optio itaque nemo nihil nisi quasi. Iusto dolor nisi perferendis odio modi cum blanditiis neque.</span>
-					<span>Aliquam, eaque, quas, assumenda dolorem tenetur sint enim nostrum officia voluptates rem unde alias aspernatur ad culpa quisquam beatae nihil nulla laudantium molestias illum delectus provident ea quaerat repudiandae autem.</span>
-				</p>
+			<div class="span3 visible-desktop">
+				<div class="entry">
+					<div class="title">
+						Follow us @ Twitter
+					</div>
+					<a class="twitter-timeline" href="https://twitter.com/mashable" data-widget-id="331328634973462528">Tweets by @mashable</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+				</div>				
 			</div>
-			<div class="span9 pull-right">
+			<div id="newsContainer" class="span9 pull-right">
 				<h1 class="newsHeading dark">Mashable - Tech</h1>
 				<div id="feed">
 					

@@ -16,6 +16,10 @@
 	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
 	    padding: 0 5px;
 	}
+
+	#newsContainer {
+		width: 100%;
+	}
 }
  
 /* Landscape phone to portrait tablet */
